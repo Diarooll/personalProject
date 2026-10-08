@@ -5,29 +5,54 @@
     box-sizing: border-box;
 }
 
-/* para definir variaveis que podem ser usadas depois com var(--cor-azul) */
+/* para definir variaveis que podem ser usadas depois com var(--cor-fundo) */
 :root {
+    --cor-fundo: #0f172a;
+    --cor-texto: #e2e8f0;
     --cor-destaque: #38bdf8;
 }
 
-header{
-    margin: 20px;
+body{
+    font-family: system-ui, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+}
+
+header {
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-nav ul{
+nav ul {
     list-style: none;
     gap: 15px;
     display: flex;
 }
 
-header a{
+#sobre p {
+    margin-left: 50px;
+}
+
+#habilidades ul {
+    margin-left: 40px;
+}
+
+#contato ul {
+    margin-left: 50px;
+}
+
+a {
     text-decoration: none;
     color: var(--cor-destaque);
 }
 
-section{
-    padding: 30px;
+section {
+    padding: 15px 35px;
+}
+
+footer {
+    margin-left: 50%;
 }
