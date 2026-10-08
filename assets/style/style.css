@@ -32,16 +32,14 @@ nav ul {
     display: flex;
 }
 
-#sobre p {
+section p,
+section ul {
     margin-left: 50px;
 }
 
-#habilidades ul {
+.espaco_a_mais {
     margin-left: 40px;
-}
-
-#contato ul {
-    margin-left: 50px;
+    list-style: none;
 }
 
 a {
@@ -54,5 +52,6 @@ section {
 }
 
 footer {
-    margin-left: 50%;
+    text-align: center;
+    padding: 20px;
 }
