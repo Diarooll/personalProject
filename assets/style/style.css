@@ -21,29 +21,8 @@ body{
 }
 
 main {
-    max-width: 800px;
+    max-width: 50rem;
     margin: 0 auto;
-}
-
-@media (max-width: 600px){
-    header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    header h1{
-        font-size: 1.9rem;
-        margin-bottom: 10px;
-    }
-    header a {
-        font-size: 0.90rem;
-    }
-    h2 {
-        font-size: 1.3rem;
-    }
-    .lista-habilidade li{
-        font-size: 0.85rem;
-    }
 }
 
 header {
@@ -54,20 +33,28 @@ header {
     justify-content: space-between;
     align-items: center;
 }
+section {
+    padding: 1rem 2rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.25rem;
+}
 
 nav ul {
     list-style: none;
-    gap: 15px;
+    gap: 1rem;
     display: flex;
 }
 
 section p,
 section ul {
-    margin-left: 50px;
+    margin-left: 1rem;
 }
 
 .lista-contato {
-    margin-left: 90px;
+    margin-left: 5rem;
     list-style: none;
 }
 
@@ -75,12 +62,12 @@ section ul {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
-    gap: 10px;
+    gap: 0.5rem;
 }
 .lista-habilidade li {
     background-color: var(--cor-etiqueta);
     border-radius: 999px;
-    padding: 6px 14px;
+    padding: 0.5rem 1rem;
     transition: background-color 0.4s, color 0.4s;
 }
 .lista-habilidade li:hover {
@@ -88,23 +75,36 @@ section ul {
     color: var(--cor-etiqueta);
 }
 
-
-
 a {
     text-decoration: none;
     color: var(--cor-destaque);
     transition: color 0.3s;
 }
-
 a:hover {
     color: var(--cor-texto);
 }
 
-section {
-    padding: 0.93rem 2.18rem;
-}
 
-footer {
-    text-align: center;
-    padding: 1.25rem;
+
+
+
+@media (max-width: 600px){
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1{
+        font-size: 1.9rem;
+        margin-bottom: 0.5rem;
+    }
+    header a {
+        font-size: 0.9rem;
+    }
+    h2 {
+        font-size: 1.25rem;
+    }
+    .lista-habilidade li{
+        font-size: 0.85rem;
+    }
 }
