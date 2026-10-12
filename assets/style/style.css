@@ -1,10 +1,3 @@
-/* reset geral */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 /* para definir variaveis que podem ser usadas depois com var(--cor-fundo) */
 :root {
     --cor-fundo: #0f172a;
@@ -13,6 +6,12 @@
     --cor-etiqueta: #1e293b;
 }
 
+/* reset geral */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body{
     font-family: system-ui, sans-serif;
@@ -26,8 +25,31 @@ main {
     margin: 0 auto;
 }
 
+@media (max-width: 600px){
+    header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    header h1{
+        font-size: 1.9rem;
+        margin-bottom: 10px;
+    }
+    header a {
+        font-size: 0.90rem;
+    }
+    h2 {
+        font-size: 1.3rem;
+    }
+    .lista-habilidade li{
+        font-size: 0.85rem;
+    }
+}
+
 header {
-    padding: 20px;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -49,21 +71,19 @@ section ul {
     list-style: none;
 }
 
-
-#lista-habilidade {
+.lista-habilidade {
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     gap: 10px;
 }
-
-.habilidade-value {
+.lista-habilidade li {
     background-color: var(--cor-etiqueta);
     border-radius: 999px;
     padding: 6px 14px;
-    transition: background-color 0.4s;
+    transition: background-color 0.4s, color 0.4s;
 }
-.habilidade-value:hover {
+.lista-habilidade li:hover {
     background-color: var(--cor-texto);
     color: var(--cor-etiqueta);
 }
@@ -73,17 +93,18 @@ section ul {
 a {
     text-decoration: none;
     color: var(--cor-destaque);
-    transition: color 0.4s;
+    transition: color 0.3s;
 }
 
 a:hover {
-    color: #e2e8f0;
+    color: var(--cor-texto);
 }
+
 section {
-    padding: 15px 35px;
+    padding: 0.93rem 2.18rem;
 }
 
 footer {
     text-align: center;
-    padding: 20px;
+    padding: 1.25rem;
 }
