@@ -1,3 +1,7 @@
+/* ==========================================================================
+   VARIÁVEIS
+   ========================================================================== */
+
 /* para definir variaveis que podem ser usadas depois com var(--cor-fundo) */
 :root {
     --cor-fundo: #0f172a;
@@ -6,19 +10,42 @@
     --cor-etiqueta: #1e293b;
 }
 
-/* reset geral */
+
+/* ==========================================================================
+   RESET
+   ========================================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+
+/* ==========================================================================
+   BASE
+   ========================================================================== */
+
+body {
     font-family: system-ui, sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
 }
+
+a {
+    text-decoration: none;
+    color: var(--cor-destaque);
+    transition: color 0.3s;
+}
+a:hover {
+    color: var(--cor-texto);
+}
+
+
+/* ==========================================================================
+   LAYOUT
+   ========================================================================== */
 
 main {
     max-width: 50rem;
@@ -26,13 +53,14 @@ main {
 }
 
 header {
-    max-width: 1000px;
+    max-width: 62.5rem;
     margin: 0 auto;
     padding: 1.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
+
 section {
     padding: 1rem 2rem;
 }
@@ -42,21 +70,41 @@ footer {
     padding: 1.25rem;
 }
 
+
+/* ==========================================================================
+   NAVEGAÇÃO
+   ========================================================================== */
+
 nav ul {
     list-style: none;
     gap: 1rem;
     display: flex;
 }
 
+
+/* ==========================================================================
+   SEÇÕES
+   ========================================================================== */
+
 section p,
 section ul {
     margin-left: 1rem;
 }
 
+
+/* ==========================================================================
+   CONTATO
+   ========================================================================== */
+
 .lista-contato {
     margin-left: 5rem;
     list-style: none;
 }
+
+
+/* ==========================================================================
+   HABILIDADES
+   ========================================================================== */
 
 .lista-habilidade {
     display: flex;
@@ -75,26 +123,18 @@ section ul {
     color: var(--cor-etiqueta);
 }
 
-a {
-    text-decoration: none;
-    color: var(--cor-destaque);
-    transition: color 0.3s;
-}
-a:hover {
-    color: var(--cor-texto);
-}
 
+/* ==========================================================================
+   RESPONSIVO (telas até 600px)
+   ========================================================================== */
 
-
-
-
-@media (max-width: 600px){
+@media (max-width: 600px) {
     header {
         display: flex;
         flex-direction: column;
         align-items: center;
     }
-    header h1{
+    header h1 {
         font-size: 1.9rem;
         margin-bottom: 0.5rem;
     }
@@ -104,7 +144,7 @@ a:hover {
     h2 {
         font-size: 1.25rem;
     }
-    .lista-habilidade li{
+    .lista-habilidade li {
         font-size: 0.85rem;
     }
 }
