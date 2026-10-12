@@ -10,13 +10,20 @@
     --cor-fundo: #0f172a;
     --cor-texto: #e2e8f0;
     --cor-destaque: #38bdf8;
+    --cor-etiqueta: #1e293b;
 }
+
 
 body{
     font-family: system-ui, sans-serif;
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
+}
+
+main {
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 header {
@@ -42,11 +49,36 @@ section ul {
     list-style: none;
 }
 
+
+#lista-habilidade {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+}
+
+.habilidade-value {
+    background-color: var(--cor-etiqueta);
+    border-radius: 999px;
+    padding: 6px 14px;
+    transition: background-color 0.4s;
+}
+.habilidade-value:hover {
+    background-color: var(--cor-texto);
+    color: var(--cor-etiqueta);
+}
+
+
+
 a {
     text-decoration: none;
     color: var(--cor-destaque);
+    transition: color 0.4s;
 }
 
+a:hover {
+    color: #e2e8f0;
+}
 section {
     padding: 15px 35px;
 }
