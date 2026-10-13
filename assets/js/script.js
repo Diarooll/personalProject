@@ -1,10 +1,25 @@
 const botao_tema = document.querySelector("#botao-tema");
-botao_tema.addEventListener("click", function(){
-    document.body.classList.toggle("claro");
-    
-    if(document.body.classList.contains("claro")){
-        botao_tema.textContent = "Modo escuro 🌜"
-    }else{
-        botao_tema.textContent = "Modo claro 🌞"
+
+function aplicarTema(tema) {
+    if (tema === "claro") {
+        document.body.classList.add("claro");
+        botao_tema.textContent = "Modo escuro 🌜";
+    } else {
+        document.body.classList.remove("claro");
+        botao_tema.textContent = "Modo claro 🌞";
     }
-})
+}
+
+// Ao carregar: lê o tema salvo (null na primeira visita cai no "else", ou seja, escuro)
+aplicarTema(localStorage.getItem("tema"));
+
+botao_tema.addEventListener("click", function () {
+    let novoTema;
+    if (document.body.classList.contains("claro")) {
+        novoTema = "escuro";
+    } else {
+        novoTema = "claro";
+    }   
+    aplicarTema(novoTema);
+    localStorage.setItem("tema", novoTema);
+});
