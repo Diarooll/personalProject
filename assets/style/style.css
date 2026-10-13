@@ -9,7 +9,12 @@
     --cor-destaque: #38bdf8;
     --cor-etiqueta: #1e293b;
 }
-
+body.claro {
+    --cor-fundo: #f8fafc;
+    --cor-texto: #0f172a;
+    --cor-destaque: #0284c7;
+    --cor-etiqueta: #e2e8f0;
+}
 
 /* ==========================================================================
    RESET
@@ -31,6 +36,7 @@ body {
     background-color: var(--cor-fundo);
     color: var(--cor-texto);
     line-height: 1.6;
+    transition: background-color 0.3s, color 0.3s;
 }
 
 a {
@@ -38,7 +44,7 @@ a {
     color: var(--cor-destaque);
     transition: color 0.3s;
 }
-a:hover {
+a:hover {   
     color: var(--cor-texto);
 }
 
@@ -79,6 +85,27 @@ nav ul {
     list-style: none;
     gap: 1rem;
     display: flex;
+}
+
+
+/* ==========================================================================
+   BOTÃO TEMA
+   ========================================================================== */
+
+#botao-tema {
+    font: inherit;
+    font-size: 0.9rem;
+    background-color: transparent;
+    color: var(--cor-texto);
+    border: 3px solid var(--cor-destaque);
+    border-radius: 999px;
+    padding: 0.4rem 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+}
+#botao-tema:hover {
+    background-color: var(--cor-destaque);
+    color: var(--cor-fundo);
 }
 
 
@@ -140,6 +167,9 @@ section ul {
     }
     header a {
         font-size: 0.9rem;
+    }
+    #botao-tema {
+        margin-top: 0.75rem;
     }
     h2 {
         font-size: 1.25rem;
